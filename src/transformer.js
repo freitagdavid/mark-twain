@@ -17,8 +17,8 @@ function transformer(node) {
   }
 
   const transformedChildren = node.type === 'table' ?
-          transformer(node.children.slice(1)) :
-          transformer(node.children);
+    transformer(node.children.slice(1)) :
+    transformer(node.children);
   switch (node.type) {
     case 'root':
       return [ 'article' ].concat(transformedChildren);
